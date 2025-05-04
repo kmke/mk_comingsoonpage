@@ -1,5 +1,5 @@
 {
-  "name": "mystic-tarot-coming-soon",
+  "name": "mk_comingsoonpage",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -20,5 +20,11 @@
     "@vitejs/plugin-react": "^4.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmke/mk_comingsoonpage.git"
+  },
+  "author": "kmke",
+  "license": "MIT"
 } 
