@@ -10,7 +10,7 @@ const BookingsContainer = styled.div`
 const Title = styled.h1`
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1rem;
   text-align: center;
 
@@ -22,14 +22,14 @@ const Title = styled.h1`
 const Subtitle = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #2d5016;
+  color: #3d2817;
   text-align: center;
   margin-bottom: 3rem;
   opacity: 0.8;
 `;
 
 const BookingForm = styled.form`
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+  background: linear-gradient(135deg, #f5e6e6 0%, #f0d9d9 100%);
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ const Label = styled.label`
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 0.5rem;
 `;
 
@@ -56,7 +56,7 @@ const Input = styled.input`
   border: 2px solid rgba(45, 80, 22, 0.2);
   border-radius: 10px;
   background: #fff;
-  color: #2d5016;
+  color: #3d2817;
   transition: all 0.3s ease;
 
   &:focus {
@@ -74,7 +74,7 @@ const Select = styled.select`
   border: 2px solid rgba(45, 80, 22, 0.2);
   border-radius: 10px;
   background: #fff;
-  color: #2d5016;
+  color: #3d2817;
   transition: all 0.3s ease;
 
   &:focus {
@@ -92,7 +92,7 @@ const TextArea = styled.textarea`
   border: 2px solid rgba(45, 80, 22, 0.2);
   border-radius: 10px;
   background: #fff;
-  color: #2d5016;
+  color: #3d2817;
   min-height: 120px;
   resize: vertical;
   transition: all 0.3s ease;
@@ -140,7 +140,7 @@ const InfoBox = styled.div`
 
 const InfoText = styled.p`
   font-family: 'Poppins', sans-serif;
-  color: #2d5016;
+  color: #3d2817;
   line-height: 1.8;
   margin-bottom: 0.5rem;
 
@@ -151,7 +151,7 @@ const InfoText = styled.p`
 
 const SuccessMessage = styled.div`
   background: rgba(45, 80, 22, 0.1);
-  border: 2px solid #2d5016;
+  border: 2px solid #3d2817;
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -160,7 +160,7 @@ const SuccessMessage = styled.div`
 
 const SuccessText = styled.p`
   font-family: 'Poppins', sans-serif;
-  color: #2d5016;
+  color: #3d2817;
   font-size: 1.1rem;
   line-height: 1.8;
 `;

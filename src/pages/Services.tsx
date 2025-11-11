@@ -11,7 +11,7 @@ const ServicesContainer = styled.div`
 const Title = styled.h1`
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1rem;
   text-align: center;
 
@@ -23,7 +23,7 @@ const Title = styled.h1`
 const Subtitle = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
-  color: #2d5016;
+  color: #3d2817;
   text-align: center;
   margin-bottom: 4rem;
   opacity: 0.8;
@@ -37,7 +37,7 @@ const ServicesGrid = styled.div`
 `;
 
 const ServiceCard = styled.div`
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+  background: linear-gradient(135deg, #f5e6e6 0%, #f0d9d9 100%);
   padding: 3rem;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ const ServiceIcon = styled.div`
 const ServiceTitle = styled.h2`
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1rem;
   text-align: center;
 `;
@@ -69,14 +69,14 @@ const ServiceDescription = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1.5rem;
   opacity: 0.9;
 `;
 
 const ServiceDetails = styled.ul`
   font-family: 'Poppins', sans-serif;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 2rem;
   padding-left: 1.5rem;
 
@@ -116,10 +116,10 @@ const CTAButton = styled(Link)`
 `;
 
 const InfoSection = styled.section`
-  background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+  background: linear-gradient(135deg, #3d2817 0%, #2a1a0f 100%);
   padding: 4rem;
   border-radius: 20px;
-  color: #f5e6d3;
+  color: #f5e6e6;
   margin-top: 4rem;
 `;
 

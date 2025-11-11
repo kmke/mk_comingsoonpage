@@ -27,7 +27,7 @@ const HeroSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 50%, #d4c4b0 100%);
+  background: linear-gradient(135deg, #f5e6e6 0%, #f0d9d9 50%, #ebcccc 100%);
   padding: 120px 2rem 4rem;
   position: relative;
   overflow: hidden;
@@ -40,8 +40,8 @@ const HeroSection = styled.section`
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(45, 80, 22, 0.1) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
     pointer-events: none;
   }
 `;
@@ -77,7 +77,7 @@ const PortraitFrame = styled.div`
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  background: #2d5016;
+  background: #3d2817;
 
   &::before {
     content: '';
@@ -85,7 +85,7 @@ const PortraitFrame = styled.div`
     inset: -4px;
     border-radius: 50%;
     padding: 4px;
-    background: linear-gradient(45deg, #d4af37, #f5e6d3, #d4af37);
+    background: linear-gradient(45deg, #d4af37, #f5e6e6, #d4af37);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -98,32 +98,23 @@ const PortraitFrame = styled.div`
   }
 `;
 
-const PortraitImage = styled.div`
+const PortraitImage = styled.img`
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #c8a882 0%, #a68b6b 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: rgba(45, 80, 22, 0.3);
-  
-  /* Placeholder for actual image */
-  &::after {
-    content: '👤';
-    font-size: 8rem;
-  }
+  object-fit: cover;
+  object-position: center;
+  display: block;
 `;
 
 const HeroText = styled.div`
-  color: #2d5016;
+  color: #3d2817;
 `;
 
 const Title = styled.h1`
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   font-weight: 700;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1rem;
   line-height: 1.2;
 
@@ -148,7 +139,7 @@ const Description = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 2rem;
   opacity: 0.9;
 `;
@@ -181,7 +172,7 @@ const SectionTitle = styled.h2`
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   text-align: center;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 3rem;
 
   @media (max-width: 768px) {
@@ -198,7 +189,7 @@ const ServicesGrid = styled.div`
 `;
 
 const ServiceCard = styled.div`
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+  background: linear-gradient(135deg, #f5e6e6 0%, #f0d9d9 100%);
   padding: 2.5rem;
   border-radius: 20px;
   text-align: center;
@@ -221,13 +212,13 @@ const ServiceIcon = styled.div`
 const ServiceTitle = styled.h3`
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1rem;
 `;
 
 const ServiceDescription = styled.p`
   font-family: 'Poppins', sans-serif;
-  color: #2d5016;
+  color: #3d2817;
   line-height: 1.8;
   opacity: 0.9;
 `;
@@ -239,7 +230,10 @@ const Home: React.FC = () => {
         <HeroContent>
           <PortraitContainer>
             <PortraitFrame>
-              <PortraitImage />
+              <PortraitImage 
+                src="/images/DFD2073A-6F96-426A-8B1B-168EB5242B0C_1_105_c.jpeg" 
+                alt="Maira Kearns - Intuitive Medium & Tarot Reader"
+              />
             </PortraitFrame>
           </PortraitContainer>
           <HeroText>

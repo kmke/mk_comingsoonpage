@@ -8,7 +8,7 @@ const AboutContainer = styled.div`
 `;
 
 const AboutSection = styled.section`
-  background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+  background: linear-gradient(135deg, #f5e6e6 0%, #f0d9d9 100%);
   padding: 4rem;
   border-radius: 20px;
   margin-bottom: 3rem;
@@ -18,7 +18,7 @@ const AboutSection = styled.section`
 const Title = styled.h1`
   font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 2rem;
   text-align: center;
 
@@ -38,7 +38,7 @@ const Paragraph = styled.p`
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 1.5rem;
 `;
 
@@ -46,7 +46,7 @@ const Quote = styled.blockquote`
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   font-style: italic;
-  color: #2d5016;
+  color: #3d2817;
   border-left: 4px solid #d4af37;
   padding-left: 2rem;
   margin: 2rem 0;
@@ -71,13 +71,13 @@ const CredentialCard = styled.div`
 const CredentialTitle = styled.h3`
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
-  color: #2d5016;
+  color: #3d2817;
   margin-bottom: 0.5rem;
 `;
 
 const CredentialText = styled.p`
   font-family: 'Poppins', sans-serif;
-  color: #2d5016;
+  color: #3d2817;
   font-size: 0.95rem;
 `;
 

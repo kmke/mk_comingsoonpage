@@ -69,7 +69,7 @@ const NavLinks = styled.div<{ $isOpen: boolean }>`
 const NavLink = styled(Link)<{ $isActive: boolean }>`
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  color: ${props => props.$isActive ? '#d4af37' : '#2d5016'};
+  color: ${props => props.$isActive ? '#d4af37' : '#3d2817'};
   text-decoration: none;
   font-weight: ${props => props.$isActive ? 600 : 400};
   position: relative;
@@ -100,7 +100,7 @@ const MenuToggle = styled.button`
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #2d5016;
+  color: #3d2817;
   cursor: pointer;
   padding: 0.5rem;
 

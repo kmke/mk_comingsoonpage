@@ -18,8 +18,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #f5e6d3;
-    color: #2d5016;
+    background: #f5e6e6;
+    color: #3d2817;
     line-height: 1.6;
   }
 
