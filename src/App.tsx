@@ -73,6 +73,8 @@ interface StarProps {
   delay: number;
   mouseX: number;
   mouseY: number;
+  windowWidth: number;
+  windowHeight: number;
 }
 
 const Star = styled.div<StarProps>`
@@ -88,8 +90,8 @@ const Star = styled.div<StarProps>`
     0 0 ${props => props.size * 2}px ${props => props.size}px rgba(255, 255, 255, 0.3),
     0 0 ${props => props.size}px ${props => props.size / 2}px rgba(255, 215, 0, 0.2);
   transform: translate(
-    ${props => (props.mouseX - window.innerWidth / 2) * 0.01}px,
-    ${props => (props.mouseY - window.innerHeight / 2) * 0.01}px
+    ${props => (props.mouseX - props.windowWidth / 2) * 0.01}px,
+    ${props => (props.mouseY - props.windowHeight / 2) * 0.01}px
   );
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -118,7 +120,11 @@ interface StarData {
   delay: number;
 }
 
-const TarotCard = styled.div`
+interface TarotCardProps {
+  $isFlipped: boolean;
+}
+
+const TarotCard = styled.div<TarotCardProps>`
   width: 200px;
   height: 350px;
   perspective: 1000px;
@@ -127,8 +133,15 @@ const TarotCard = styled.div`
   animation: ${float} 6s ease-in-out infinite;
   z-index: 1;
 
-  &:hover .card-inner {
-    transform: rotateY(180deg);
+  &:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+
+  &:focus {
+    outline: 2px solid rgba(255, 215, 0, 0.5);
+    outline-offset: 4px;
+    border-radius: 15px;
   }
 
   .card-inner {
@@ -138,6 +151,7 @@ const TarotCard = styled.div`
     text-align: center;
     transition: transform 1.5s ease-in-out;
     transform-style: preserve-3d;
+    transform: ${props => props.$isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'};
   }
 
   .card-front, .card-back {
@@ -241,6 +255,22 @@ function App() {
   const [stars, setStars] = useState<StarData[]>([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [constellationPaths, setConstellationPaths] = useState<[number, number][][]>([]);
+  const [windowSize, setWindowSize] = useState({ width: 1920, height: 1080 });
+  const [isCardFlipped, setIsCardFlipped] = useState(false);
+
+  useEffect(() => {
+    // Update window size
+    const updateWindowSize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    updateWindowSize();
+    window.addEventListener('resize', updateWindowSize);
+    return () => window.removeEventListener('resize', updateWindowSize);
+  }, []);
 
   useEffect(() => {
     // Create constellation patterns
@@ -301,6 +331,17 @@ function App() {
     });
   }, []);
 
+  const handleCardClick = useCallback(() => {
+    setIsCardFlipped(prev => !prev);
+  }, []);
+
+  const handleCardKeyDown = useCallback((event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setIsCardFlipped(prev => !prev);
+    }
+  }, []);
+
   return (
     <Container onMouseMove={handleMouseMove}>
       <SkyField>
@@ -332,13 +373,22 @@ function App() {
             delay={star.delay}
             mouseX={mousePosition.x}
             mouseY={mousePosition.y}
+            windowWidth={windowSize.width}
+            windowHeight={windowSize.height}
           />
         ))}
       </SkyField>
       
       <Title>Whispered Musings</Title>
       
-      <TarotCard>
+      <TarotCard 
+        role="button" 
+        tabIndex={0} 
+        aria-label="Coming soon tarot card"
+        $isFlipped={isCardFlipped}
+        onClick={handleCardClick}
+        onKeyDown={handleCardKeyDown}
+      >
         <div className="card-inner">
           <div className="card-front">
             <div className="corner-ornament top-left">✧</div>
