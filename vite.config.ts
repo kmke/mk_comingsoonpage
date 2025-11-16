@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/mk_comingsoonpage/',
+  // Use '/' for custom domain (CNAME) or '/mk_comingsoonpage/' for GitHub Pages subdirectory
+  base: '/',
 }) 
